@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- pinot_v1alpha1_pinotcluster.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

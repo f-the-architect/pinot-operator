@@ -1,0 +1,9 @@
+apiVersion: pinot.apache.org/v1alpha1
+kind: PinotCluster
+metadata:
+  labels:
+    app.kubernetes.io/name: pinot-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: pinotcluster-sample
+spec:
+  # TODO(user): Add fields here
