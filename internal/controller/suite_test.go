@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package controller
+package controllers
 
 import (
 	"context"
@@ -32,7 +32,7 @@ import (
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	pinotv1alpha1 "github.com/f-the-architect/pinot-operator.git/api/v1alpha1"
+	pinotv1alpha1 "github.com/f-the-architect/pinot-operator/api/v1alpha1"
 	// +kubebuilder:scaffold:imports
 )
 

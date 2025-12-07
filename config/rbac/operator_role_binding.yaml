@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: pinot-operator-rolebinding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: pinot-operator-role
+subjects:
+  - kind: ServiceAccount
+    name: pinot-operator
+    namespace: pinot-operator-system

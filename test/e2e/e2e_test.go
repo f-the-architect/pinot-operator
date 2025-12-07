@@ -30,7 +30,7 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"github.com/f-the-architect/pinot-operator.git/test/utils"
+	"github.com/f-the-architect/pinot-operator/test/utils"
 )
 
 // namespace where the project is deployed in

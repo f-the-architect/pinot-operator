@@ -7,7 +7,7 @@ domain: apache.org
 layout:
 - go.kubebuilder.io/v4
 projectName: pinot-operator
-repo: github.com/f-the-architect/pinot-operator.git
+repo: github.com/f-the-architect/pinot-operator
 resources:
 - api:
     crdVersion: v1
@@ -16,6 +16,6 @@ resources:
   domain: apache.org
   group: pinot
   kind: PinotCluster
-  path: github.com/f-the-architect/pinot-operator.git/api/v1alpha1
+  path: github.com/f-the-architect/pinot-operator/api/v1alpha1
   version: v1alpha1
 version: "3"

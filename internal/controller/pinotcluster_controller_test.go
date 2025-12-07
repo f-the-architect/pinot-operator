@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package controller
+package controllers
 
 import (
 	"context"
@@ -27,7 +27,7 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	pinotv1alpha1 "github.com/f-the-architect/pinot-operator.git/api/v1alpha1"
+	pinotv1alpha1 "github.com/f-the-architect/pinot-operator/api/v1alpha1"
 )
 
 var _ = Describe("PinotCluster Controller", func() {

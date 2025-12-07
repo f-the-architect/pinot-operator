@@ -5,15 +5,18 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
+// ----- Zookeeper -----
+
 type PinotZookeeperExternal struct {
 	// e.g. "zookeeper:2181/pinot-cluster"
 	ConnectionString string `json:"connectionString"`
 }
 
 type PinotZookeeperSpec struct {
-	// For now only external mode to keep operator smaller.
 	External *PinotZookeeperExternal `json:"external,omitempty"`
 }
+
+// ----- Common resources / pod config -----
 
 type PinotComponentResources struct {
 	corev1.ResourceRequirements `json:",inline"`
@@ -87,6 +90,7 @@ type PinotClusterStatus struct {
 // +kubebuilder:object:root=true
 // +kubebuilder:subresource:status
 
+// PinotCluster is the Schema for the pinotclusters API
 type PinotCluster struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
@@ -97,6 +101,7 @@ type PinotCluster struct {
 
 // +kubebuilder:object:root=true
 
+// PinotClusterList contains a list of PinotCluster
 type PinotClusterList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`

@@ -1,9 +1,41 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: pinot
+---
 apiVersion: pinot.apache.org/v1alpha1
 kind: PinotCluster
 metadata:
-  labels:
-    app.kubernetes.io/name: pinot-operator
-    app.kubernetes.io/managed-by: kustomize
-  name: pinotcluster-sample
+  name: pinot-sample
+  namespace: pinot
 spec:
-  # TODO(user): Add fields here
+  clusterName: "pinot-sample"
+
+  image: "apachepinot/pinot:1.2.0"
+  imagePullPolicy: IfNotPresent
+
+  zookeeper:
+    external:
+      connectionString: "zookeeper:2181/pinot-sample"
+
+  controller:
+    replicas: 1
+    resources: {}
+
+  broker:
+    replicas: 2
+    resources: {}
+
+  server:
+    replicas: 3
+    resources: {}
+    storage:
+      size: "50Gi"
+      storageClassName: "standard"
+
+  minion:
+    enabled: true
+    replicas: 1
+    resources: {}
+
+  pod: {}
